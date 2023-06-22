@@ -1,9 +1,9 @@
 const LayoutFooter = () => {
   return (
-    <footer className="footer p-10 bg-neutral text-neutral-content">
+    <footer className="footer bg-neutral p-10 text-neutral-content">
       <div>
         <svg
-          className="fill-white w-10"
+          className="w-10 fill-white"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 480.72 570"
         >

@@ -1,3 +1,4 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from "next/link";
 
 export default function Home() {
@@ -7,7 +8,7 @@ export default function Home() {
         <img
           alt="A cute cat"
           src="https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_1280.jpg"
-          className="w-full object-cover h-[80vh] "
+          className="h-[80vh] w-full object-cover "
         />
         <div className="hero-overlay bg-opacity-60"></div>
         <div className="hero-content text-center text-neutral-content">
@@ -16,14 +17,14 @@ export default function Home() {
               Esta es una pagina de inicio temporal
             </h1>
             <p className="mb-5">El gato es bonico</p>
-            <Link className="btn btn-primary" href="/moodboard">
+            <Link className="btn-primary btn" href="/moodboard">
               ¡Al generador de moodboards!
             </Link>
           </div>
         </div>
       </header>
       <section className="my-10">
-        <h1 className="text-5xl my-10">Estoy trabajando con esta movida:</h1>
+        <h1 className="my-10 text-5xl">Estoy trabajando con esta movida:</h1>
         <div className="mockup-code">
           <pre data-prefix="$">
             <code>npm i daisyui</code>
