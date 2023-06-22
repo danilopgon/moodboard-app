@@ -1,8 +1,8 @@
-import SwitchTheme from "./components/SwitchTheme";
+import Link from "next/link";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between rounded">
+    <main className="flex min-h-screen flex-col items-center justify-between">
       <header className="hero">
         <img
           alt="A cute cat"
@@ -16,9 +16,9 @@ export default function Home() {
               Esta es una pagina de inicio temporal
             </h1>
             <p className="mb-5">El gato es bonico</p>
-            <button className="btn btn-primary">
-              Al generador de moodboards
-            </button>
+            <Link className="btn btn-primary" href="/moodboard">
+              ¡Al generador de moodboards!
+            </Link>
           </div>
         </div>
       </header>

@@ -27,18 +27,36 @@ const NavBar = () => {
             className="menu menu-sm dropdown-content mt-3 z-[1] p-2 shadow bg-base-100 rounded-box w-52"
           >
             <li>
-              <a>Item 1</a>
+              <Link href="/">Inicio</Link>
+            </li>
+            <li>
+              <Link href="/moodboard">Generador de moodboard</Link>
+            </li>
+            <li>
+              <a
+                target="_blank"
+                href="https://danilopgon.com/"
+                rel="noopener noreferrer"
+              >
+                Sobre mí
+              </a>
             </li>
           </ul>
         </div>
         <Link href="/" className="btn btn-ghost normal-case text-xl">
-          Moodboard generator
+          That&apos;s a mood!
         </Link>
       </div>
       <div className="navbar-center hidden lg:flex">
         <ul className="menu menu-horizontal px-1">
           <li>
-            <a>Item 1</a>
+            <Link href="/">Inicio</Link>
+          </li>
+          <li>
+            <Link href="/moodboard">Generador de moodboard</Link>
+          </li>
+          <li>
+            <a href="https://danilopgon.com/">Sobre mí</a>
           </li>
         </ul>
       </div>

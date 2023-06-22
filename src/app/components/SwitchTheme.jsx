@@ -19,7 +19,7 @@ const SwitchTheme = () => {
     <button
       className="btn btn-circle"
       onClick={toggleTheme}
-      data-toggle-theme="night,cupcake"
+      data-toggle-theme="night, light"
       data-act-class="ACTIVECLASS"
     >
       {theme === "dark" ? (
