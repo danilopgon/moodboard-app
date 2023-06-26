@@ -58,8 +58,12 @@ const MoodBento = ({ imgUrls }) => {
         {imgUrls.map((image, index) => (
           <div
             key={index}
-            className={`col-span-1 bg-cover xl:col-span-2 ${
-              index === 1 ? "xl:row-span-2" : ""
+            className={`col-span-1 bg-cover
+            ${index === 1 ? "xl:row-span-2" : ""}
+            ${
+              index === 0 || index === 1 || index === 2 || index === 5
+                ? "xl:col-span-2"
+                : ""
             }`}
           >
             <img
