@@ -1,9 +1,9 @@
 const LayoutFooter = () => {
   return (
-    <footer className="footer bg-neutral p-10 text-neutral-content">
-      <div>
+    <footer className="footer bg-base-200 p-10">
+      <div className="gap-0">
         <svg
-          className="w-10 fill-white"
+          className="w-10 fill-primary"
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 480.72 570"
         >
@@ -22,11 +22,8 @@ const LayoutFooter = () => {
             points="175.12 437.81 175.12 131.34 171.32 131.34 171.32 0 0 0 0 569.15 171.32 569.15 171.32 437.81 175.12 437.81"
           />
         </svg>
-        <p>
-          danilopgon
-          <br />
-          Estoy aprendiendito
-        </p>
+        <p className="mb-0 mt-3">made by</p>
+        <h5 className="mt-0 text-xl">danilopgon</h5>
       </div>
       <div>
         <span className="footer-title">Social</span>

@@ -3,7 +3,7 @@ import SwitchTheme from "./SwitchTheme";
 
 const NavBar = () => {
   return (
-    <div className="navbar bg-neutral">
+    <div className="navbar bg-base-200">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn-ghost btn lg:hidden">
@@ -30,9 +30,6 @@ const NavBar = () => {
               <Link href="/">Inicio</Link>
             </li>
             <li>
-              <Link href="/moodboard">Generador de moodboard</Link>
-            </li>
-            <li>
               <a
                 target="_blank"
                 href="https://danilopgon.com/"
@@ -51,9 +48,6 @@ const NavBar = () => {
         <ul className="menu menu-horizontal px-1">
           <li>
             <Link href="/">Inicio</Link>
-          </li>
-          <li>
-            <Link href="/moodboard">Generador de moodboard</Link>
           </li>
           <li>
             <a href="https://danilopgon.com/">Sobre mí</a>

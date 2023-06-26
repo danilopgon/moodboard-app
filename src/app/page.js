@@ -1,42 +1,69 @@
-/* eslint-disable @next/next/no-img-element */
-import Link from "next/link";
+"use client";
 
-export default function Home() {
+import MoodBento from "./components/MoodBento";
+import { useState, useRef } from "react";
+import Balancer from "react-wrap-balancer";
+
+import exportAsImage from "./utils/exportAsImage";
+
+export default function Moodboard() {
+  const [files, setFiles] = useState([]);
+  const [uploadedFiles, setUploadedFiles] = useState([]);
+
+  const handleFileChange = (e) => {
+    const images = e.target.files;
+    const imagesArray = [];
+
+    for (let i = 0; i < images.length; i++) {
+      const image = images[i];
+      imagesArray.push(URL.createObjectURL(image));
+    }
+
+    setFiles(imagesArray);
+  };
+
+  const handleUploadClick = (e) => {
+    e.preventDefault();
+    if (files?.length !== 6) {
+      alert("¡Debes elegir 6 imágenes!");
+    }
+    setUploadedFiles(files);
+  };
+
   return (
     <main className="flex min-h-screen flex-col items-center justify-between">
-      <header className="hero">
-        <img
-          alt="A cute cat"
-          src="https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_1280.jpg"
-          className="h-[80vh] w-full object-cover "
-        />
-        <div className="hero-overlay bg-opacity-60"></div>
-        <div className="hero-content text-center text-neutral-content">
-          <div className="max-w-md">
-            <h1 className="mb-5 text-5xl font-bold">
-              Esta es una pagina de inicio temporal
-            </h1>
-            <p className="mb-5">El gato es bonico</p>
-            <Link className="btn-primary btn" href="/moodboard">
-              ¡Al generador de moodboards!
-            </Link>
+      <div className="card m-5 my-10 grid gap-10 rounded-xl bg-base-300 p-10 lg:mx-28 lg:grid-cols-4">
+        <section className="flex flex-col place-content-center gap-10 text-left lg:col-span-1">
+          <h1 className="text-5xl">¡Hola!</h1>
+          <h2 className="text-4xl">
+            <Balancer>Te ayudamos a generar un moodboard rápidamente</Balancer>
+          </h2>
+          <h3 className=" text-xl">
+            <Balancer>Sube tus imágenes y nosotros hacemos el resto</Balancer>
+          </h3>
+
+          <form className="flex flex-col gap-10">
+            <input
+              type="file"
+              multiple
+              className="file-input-bordered file-input-primary file-input w-full"
+              accept="image/*"
+              onChange={handleFileChange}
+            />
+            <button onClick={handleUploadClick} className="btn-primary btn">
+              ¡Hazme un moodboard!
+            </button>
+          </form>
+          <button onClick={exportAsImage} className="btn-primary btn">
+            Descarga el moodboard
+          </button>
+        </section>
+        <section className="lg:col-span-3">
+          <div id="moodboard">
+            <MoodBento imgUrls={uploadedFiles} />
           </div>
-        </div>
-      </header>
-      <section className="my-10">
-        <h1 className="my-10 text-5xl">Estoy trabajando con esta movida:</h1>
-        <div className="mockup-code">
-          <pre data-prefix="$">
-            <code>npm i daisyui</code>
-          </pre>
-          <pre data-prefix=">" className="text-warning">
-            <code>installing...</code>
-          </pre>
-          <pre data-prefix=">" className="text-success">
-            <code>Done!</code>
-          </pre>
-        </div>
-      </section>
+        </section>
+      </div>
     </main>
   );
 }
