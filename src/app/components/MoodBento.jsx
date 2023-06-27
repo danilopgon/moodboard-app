@@ -9,7 +9,7 @@ const MoodBento = ({ imgUrls }) => {
           <div
             className="bg-cat-1  col-span-1 xl:col-span-2"
             style={{
-              backgroundImage: `url('https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_1280.jpg')`,
+              backgroundImage: `url('/placeholder.webp')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -17,7 +17,7 @@ const MoodBento = ({ imgUrls }) => {
           <div
             className="bg-cat-2 col-span-1  row-span-1 xl:col-span-2 xl:row-span-2"
             style={{
-              backgroundImage: `url('https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_1280.jpg')`,
+              backgroundImage: `url('/placeholder.webp')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -25,7 +25,7 @@ const MoodBento = ({ imgUrls }) => {
           <div
             className="bg-cat-3  col-span-1 xl:col-span-2"
             style={{
-              backgroundImage: `url('https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_1280.jpg')`,
+              backgroundImage: `url('/placeholder.webp')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -33,7 +33,7 @@ const MoodBento = ({ imgUrls }) => {
           <div
             className="bg-cat-4"
             style={{
-              backgroundImage: `url('https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_1280.jpg')`,
+              backgroundImage: `url('/placeholder.webp')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -41,7 +41,7 @@ const MoodBento = ({ imgUrls }) => {
           <div
             className="bg-cat-5"
             style={{
-              backgroundImage: `url('https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_1280.jpg')`,
+              backgroundImage: `url('/placeholder.webp')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
@@ -49,7 +49,7 @@ const MoodBento = ({ imgUrls }) => {
           <div
             className="bg-cat-6  col-span-1 xl:col-span-2"
             style={{
-              backgroundImage: `url('https://cdn.pixabay.com/photo/2017/07/25/01/22/cat-2536662_1280.jpg')`,
+              backgroundImage: `url('/placeholder.webp')`,
               backgroundSize: "cover",
               backgroundPosition: "center",
             }}
