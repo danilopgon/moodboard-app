@@ -1,7 +1,7 @@
 "use client";
 
 import MoodBento from "./components/MoodBento";
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import Balancer from "react-wrap-balancer";
 
 import exportAsImage from "./utils/exportAsImage";
@@ -9,6 +9,15 @@ import exportAsImage from "./utils/exportAsImage";
 export default function Moodboard() {
   const [files, setFiles] = useState([]);
   const [uploadedFiles, setUploadedFiles] = useState([]);
+  const [myHTMLElement, setMyHTMLElement] = useState(null);
+
+  const moodboardRef = useRef();
+
+  useEffect(() => {
+    if (moodboardRef.current) {
+      setMyHTMLElement(moodboardRef.current);
+    }
+  }, [uploadedFiles]);
 
   const handleFileChange = (e) => {
     const images = e.target.files;
@@ -54,12 +63,17 @@ export default function Moodboard() {
               ¡Hazme un moodboard!
             </button>
           </form>
-          <button onClick={exportAsImage} className="btn-primary btn">
+          <button
+            onClick={() => {
+              exportAsImage(myHTMLElement);
+            }}
+            className="btn-primary btn"
+          >
             Descarga el moodboard
           </button>
         </section>
         <section className="lg:col-span-3">
-          <div id="moodboard">
+          <div ref={moodboardRef}>
             <MoodBento imgUrls={uploadedFiles} />
           </div>
         </section>
